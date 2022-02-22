@@ -9,3 +9,9 @@ WHERE YEAR(`date_of_birth`) = 1990;
 SELECT * 
 FROM `courses` 
 WHERE `cfu` > 10;
+
+-- terza query
+
+SELECT * 
+FROM `students` 
+WHERE (YEAR(CURRENT_DATE) - YEAR(`date_of_birth`)) >= 30;
