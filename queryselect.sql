@@ -35,3 +35,9 @@ WHERE HOUR(`hour`) > 14 AND `date` = "2020-06-20";
 
 SELECT COUNT(`id`)
 FROM `departments`;
+
+-- ottava query
+
+SELECT COUNT(`id`)
+FROM `teachers` 
+WHERE `phone` IS NULL;
