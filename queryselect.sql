@@ -21,3 +21,9 @@ WHERE (YEAR(CURRENT_DATE) - YEAR(`date_of_birth`)) >= 30;
 SELECT * 
 FROM `courses` 
 WHERE `period` = "I semestre" AND `year`= 1;
+
+-- quinta query
+
+SELECT * 
+FROM `exams` 
+WHERE HOUR(`hour`) > 14 AND `date` = "2020-06-20";
