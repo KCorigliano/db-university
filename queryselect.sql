@@ -15,3 +15,9 @@ WHERE `cfu` > 10;
 SELECT * 
 FROM `students` 
 WHERE (YEAR(CURRENT_DATE) - YEAR(`date_of_birth`)) >= 30;
+
+-- quarta query
+
+SELECT * 
+FROM `courses` 
+WHERE `period` = "I semestre" AND `year`= 1;
