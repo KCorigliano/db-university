@@ -27,3 +27,11 @@ WHERE `period` = "I semestre" AND `year`= 1;
 SELECT * 
 FROM `exams` 
 WHERE HOUR(`hour`) > 14 AND `date` = "2020-06-20";
+
+
+
+
+-- settima query
+
+SELECT COUNT(`id`)
+FROM `departments`;
