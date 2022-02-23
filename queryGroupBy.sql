@@ -18,3 +18,11 @@ SELECT `exam_id`, AVG(`vote`), COUNT(`vote`)
 FROM `exam_student`
 GROUP BY `exam_id`
 ORDER BY `exam_id`
+
+-- 4 query
+
+SELECT `departments`.`name`, COUNT(`degrees`.`name`) AS `corsi_di_laurea`
+FROM `departments`
+JOIN `degrees`
+ON `departments`.`id`=`degrees`.`department_id`
+GROUP BY `departments`.`name`;
