@@ -11,3 +11,10 @@ SELECT COUNT(`id`), `office_address`
 FROM `teachers`
 GROUP BY `office_address`
 ORDER BY COUNT(`id`)
+
+-- 3 query
+
+SELECT `exam_id`, AVG(`vote`), COUNT(`vote`)
+FROM `exam_student`
+GROUP BY `exam_id`
+ORDER BY `exam_id`
