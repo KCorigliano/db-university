@@ -14,7 +14,7 @@ WHERE `cfu` > 10;
 
 SELECT * 
 FROM `students` 
-WHERE (YEAR(CURRENT_DATE) - YEAR(`date_of_birth`)) >= 30;
+WHERE DATESUB(CURDATE(), INTERVAL 30 YEAR);
 
 -- quarta query
 
