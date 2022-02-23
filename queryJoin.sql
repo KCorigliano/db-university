@@ -26,3 +26,10 @@ WHERE `teachers`.`id` = 44;
 
 -- 4 query
 
+SELECT `students`.`name`, `students`.`surname`, `degrees`.`name`, `degrees`.`level`, `departments`.`name`
+FROM `students`
+JOIN `degrees`
+	ON `students`.`degree_id` = `degrees`.`id` 
+JOIN `departments`
+	ON `degrees`.`department_id` = `departments`.`id`
+ORDER BY `students`.`surname`, `students`.`name` ASC 
