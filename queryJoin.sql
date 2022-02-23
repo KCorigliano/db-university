@@ -16,7 +16,13 @@ WHERE `departments`.`name` LIKE "dipartimento di neuroscienze";
 
 -- 3 query
 
-
+SELECT `courses`.`name`, `courses`.`period`, `courses`.`year`, `courses`.`cfu`, `teachers`.`name`, `teachers`.`surname`, `teachers`.`email` 
+FROM `course_teacher`
+JOIN `courses`
+	ON `course_teacher`.`course_id` = `courses`.`id`
+JOIN `teachers`
+	ON `course_teacher`.`teacher_id` = `teachers`.`id`
+WHERE `teachers`.`id` = 44;
 
 -- 4 query
 
