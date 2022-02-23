@@ -45,3 +45,19 @@ JOIN `course_teacher`
 JOIN `teachers`
 	ON `course_teacher`.`teacher_id` = `teachers`.`id`  
 ORDER BY `degrees`.`name`, `courses`.`year`, `courses`.`cfu`, `teachers`.`surname` ASC
+
+-- 6 query
+
+SELECT `teachers`.`name`, `teachers`.`surname`
+FROM `departments` 
+JOIN `degrees`
+	ON `departments`.`id` = `degrees`.`department_id`
+JOIN `courses`
+	ON `degrees`.`id` = `courses`.`degree_id`
+JOIN `course_teacher`
+	ON `courses`.`id` = `course_teacher`.`course_id`
+JOIN `teachers`
+	ON `course_teacher`.`teacher_id` = `teachers`.`id`
+WHERE `departments`.`name` LIKE "dipartimento di matematica"  
+GROUP BY `teachers`.`id`
+ORDER BY `teachers`.`name` ASC
