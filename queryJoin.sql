@@ -33,3 +33,15 @@ JOIN `degrees`
 JOIN `departments`
 	ON `degrees`.`department_id` = `departments`.`id`
 ORDER BY `students`.`surname`, `students`.`name` ASC 
+
+-- 5 query
+
+SELECT `degrees`.`name`, `degrees`.`level`, `courses`.`name`, `courses`.`year`, `courses`.`cfu`, `teachers`.`name`, `teachers`.`surname`
+FROM `degrees`
+JOIN `courses`
+	ON `degrees`.`id` = `courses`.`degree_id` 
+JOIN `course_teacher`
+	ON `courses`.`id` = `course_teacher`.`course_id`
+JOIN `teachers`
+	ON `course_teacher`.`teacher_id` = `teachers`.`id`  
+ORDER BY `degrees`.`name`, `courses`.`year`, `courses`.`cfu`, `teachers`.`surname` ASC
